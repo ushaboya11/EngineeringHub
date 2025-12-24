@@ -1,0 +1,58 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n, q;
+    cin >> n >> q;
+    cin.ignore();  // ignore the newline after numbers
+
+    map<string, string> attr_map;
+    vector<string> tag_stack;
+
+    for (int i = 0; i < n; i++) {
+        string line;
+        getline(cin, line);
+
+        if (line.substr(0, 2) == "</") {
+            // Closing tag, pop from stack
+            tag_stack.pop_back();
+        } else {
+            // Opening tag
+            line = line.substr(1, line.size() - 2); // remove < and >
+            stringstream ss(line);
+            string tag;
+            ss >> tag;
+
+            // Build full path
+            string full_tag_path = "";
+            if (!tag_stack.empty()) {
+                full_tag_path = tag_stack.back() + "." + tag;
+            } else {
+                full_tag_path = tag;
+            }
+
+            tag_stack.push_back(full_tag_path);
+
+            // Read attributes
+            string attr_name, eq, attr_value;
+            while (ss >> attr_name >> eq >> attr_value) {
+                // Remove quotes from value
+                attr_value = attr_value.substr(1, attr_value.size() - 2);
+                attr_map[full_tag_path + "~" + attr_name] = attr_value;
+            }
+        }
+    }
+
+    // Answer queries
+    for (int i = 0; i < q; i++) {
+        string query;
+        cin >> query;
+        if (attr_map.find(query) != attr_map.end()) {
+            cout << attr_map[query] << endl;
+        } else {
+            cout << "Not Found!" << endl;
+        }
+    }
+
+    return 0;
+}
