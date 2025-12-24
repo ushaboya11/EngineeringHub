@@ -1,0 +1,11 @@
+if __name__ == '__main__':
+    # number of English subscribers
+    n = int(input())
+    english = set(map(int, input().split()))
+    
+    # number of French subscribers
+    m = int(input())
+    french = set(map(int, input().split()))
+    
+    # union of both sets gives all distinct subscribers
+    print(len(english.union(french)))
