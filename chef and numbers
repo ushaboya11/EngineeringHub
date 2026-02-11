@@ -1,0 +1,14 @@
+def digit_sum(x):
+    return sum(int(d) for d in str(x))
+
+def solve():
+    N = int(input().strip())
+    count = 0
+    for X in range(max(1, N - 97), N + 1):
+        sX = digit_sum(X)
+        sSX = digit_sum(sX)
+        if X + sX + sSX == N:
+            count += 1
+    print(count)
+
+solve()
