@@ -1,0 +1,9 @@
+# cook your dish here
+# Read number of people in the team
+n = int(input().strip())
+
+# Check if team size is between 6 and 8 (inclusive)
+if 6 <= n <= 8:
+    print("Yes")
+else:
+    print("No")
