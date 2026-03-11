@@ -1,0 +1,15 @@
+# Finding Square Roots - CodeChef Problem FSQRT
+
+import math
+
+# Read number of test cases
+T = int(input().strip())
+
+for _ in range(T):
+    # Read integer N
+    N = int(input().strip())
+    
+    # Compute square root and round down
+    result = math.isqrt(N)   # integer square root (floor)
+    
+    print(result)
