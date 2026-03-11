@@ -1,0 +1,20 @@
+# Speed Limit Test - CodeChef Problem SPEEDTEST
+
+# Read number of test cases
+T = int(input().strip())
+
+for _ in range(T):
+    # Read A (Alice distance), X (Alice time), B (Bob distance), Y (Bob time)
+    A, X, B, Y = map(int, input().split())
+    
+    # Compute speeds
+    alice_speed = A / X
+    bob_speed = B / Y
+    
+    # Compare speeds
+    if alice_speed > bob_speed:
+        print("ALICE")
+    elif bob_speed > alice_speed:
+        print("BOB")
+    else:
+        print("EQUAL")
