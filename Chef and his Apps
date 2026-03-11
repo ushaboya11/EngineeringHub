@@ -1,0 +1,24 @@
+import sys
+
+def min_deletions(S, X, Y, Z):
+    free = S - (X + Y)
+    if free >= Z:
+        return 0
+    # Try deleting one app: best to test either; order doesn't matter
+    if S - X >= Z or S - Y >= Z:
+        return 1
+    return 2  # Since Z <= S, deleting both will suffice
+
+def main():
+    data = sys.stdin.read().strip().split()
+    t = int(data[0])
+    out = []
+    i = 1
+    for _ in range(t):
+        S = int(data[i]); X = int(data[i+1]); Y = int(data[i+2]); Z = int(data[i+3])
+        i += 4
+        out.append(str(min_deletions(S, X, Y, Z)))
+    print("\n".join(out))
+
+if __name__ == "__main__":
+    main()
