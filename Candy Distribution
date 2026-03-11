@@ -1,0 +1,15 @@
+import sys
+
+def solve():
+    data = sys.stdin.read().strip().split()
+    t = int(data[0])
+    idx = 1
+    out = []
+    for _ in range(t):
+        N = int(data[idx]); M = int(data[idx+1]); idx += 2
+        out.append("Yes" if N % (2 * M) == 0 else "No")
+    print("\n".join(out))
+
+if __name__ == "__main__":
+    solve()
+
