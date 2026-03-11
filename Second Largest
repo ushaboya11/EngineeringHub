@@ -1,0 +1,9 @@
+t = int(input())
+for _ in range(t):
+    A, B, C = map(int, input().split())
+    
+    nums = [A, B, C]
+    nums.sort()
+    
+    # Second largest element
+    print(nums[1])
