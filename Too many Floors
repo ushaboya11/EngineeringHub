@@ -1,0 +1,11 @@
+# cook your dish here
+t = int(input())
+for _ in range(t):
+    X, Y = map(int, input().split())
+    
+    # Calculate floor numbers
+    floor_X = (X - 1) // 10 + 1
+    floor_Y = (Y - 1) // 10 + 1
+    
+    # Number of floors to travel
+    print(abs(floor_X - floor_Y))
