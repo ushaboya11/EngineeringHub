@@ -1,0 +1,17 @@
+import sys
+
+def solve():
+    data = sys.stdin.read().strip().split()
+    t = int(data[0])
+    idx = 1
+    out = []
+    for _ in range(t):
+        N = int(data[idx]); X = int(data[idx+1]); K = int(data[idx+2])
+        idx += 3
+        full_from_tank = K // X
+        out.append(str(min(N, full_from_tank)))
+    print("\n".join(out))
+
+if __name__ == "__main__":
+    solve()
+
