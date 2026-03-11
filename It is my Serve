@@ -1,0 +1,14 @@
+t = int(input())
+for _ in range(t):
+    P, Q = map(int, input().split())
+    
+    # Total points played
+    total_points = P + Q
+    
+    # Each player serves for 2 consecutive points
+    # Alice serves first
+    if (total_points // 2) % 2 == 0:
+        print("Alice")
+    else:
+        print("Bob")
+
