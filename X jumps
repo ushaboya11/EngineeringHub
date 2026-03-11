@@ -1,0 +1,19 @@
+# X Jumps - CodeChef Problem XJUMP
+
+# Read number of test cases
+T = int(input().strip())
+
+for _ in range(T):
+    # Read X (target stair) and Y (jump size)
+    X, Y = map(int, input().split())
+    
+    # Number of big jumps possible
+    big_jumps = X // Y
+    
+    # Remaining steps after big jumps
+    remaining = X % Y
+    
+    # Total moves = big jumps + remaining (since remaining must be covered by 1-step moves)
+    moves = big_jumps + remaining
+    
+    print(moves)
