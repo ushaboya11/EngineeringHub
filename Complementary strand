@@ -1,0 +1,24 @@
+# Complementary Strand in a DNA - CodeChef Problem DNASTRAND
+
+# Read number of test cases
+T = int(input().strip())
+
+# Define mapping for complements
+complement = {
+    'A': 'T',
+    'T': 'A',
+    'C': 'G',
+    'G': 'C'
+}
+
+for _ in range(T):
+    # Read N (length of string) - not actually needed
+    N = int(input().strip())
+    
+    # Read DNA strand
+    S = input().strip()
+    
+    # Build complementary strand
+    comp_strand = ''.join(complement[ch] for ch in S)
+    
+    print(comp_strand)
