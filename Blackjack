@@ -1,0 +1,18 @@
+# Blackjack - CodeChef Problem BLACKJACK
+
+# Read number of test cases
+T = int(input().strip())
+
+for _ in range(T):
+    # Read A and B
+    A, B = map(int, input().split())
+    
+    # The third number needed to reach 21
+    third = 21 - (A + B)
+    
+    # Check if it's possible (must be between 1 and 10 inclusive)
+    if 1 <= third <= 10:
+        print(third)
+    else:
+        print(-1)
+# cook your dish here
