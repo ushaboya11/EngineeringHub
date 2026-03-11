@@ -1,0 +1,9 @@
+T = int(input())  # number of test cases
+for _ in range(T):
+    N = int(input())  # number of women
+    ages = list(map(int, input().split()))
+    
+    # count eligible women
+    eligible = sum(1 for age in ages if 10 <= age <= 60)
+    
+    print(eligible)
