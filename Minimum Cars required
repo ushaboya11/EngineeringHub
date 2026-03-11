@@ -1,0 +1,14 @@
+# Minimum Cars required - CodeChef Problem MINCARS
+
+# Read number of test cases
+T = int(input().strip())
+
+for _ in range(T):
+    # Read number of friends
+    N = int(input().strip())
+    
+    # Each car can hold 4 people
+    # Minimum cars = ceil(N / 4)
+    cars = (N + 3) // 4   # integer ceiling trick
+    
+    print(cars)
