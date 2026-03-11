@@ -1,0 +1,10 @@
+t = int(input())
+for _ in range(t):
+    x = int(input())
+    state = x % 3
+    if state == 0:
+        print("NORMAL")
+    elif state == 1:
+        print("HUGE")
+    else:
+        print("SMALL")
