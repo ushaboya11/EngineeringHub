@@ -1,0 +1,10 @@
+# Decrement OR Increment - CodeChef Problem DECINC
+
+# Read input number
+N = int(input().strip())
+
+# Check divisibility by 4
+if N % 4 == 0:
+    print(N + 1)
+else:
+    print(N - 1)
