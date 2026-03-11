@@ -1,0 +1,19 @@
+t = int(input())
+for _ in range(t):
+    A, B, X, Y = map(int, input().split())
+    
+    if B > A:
+        # Need hot water
+        if B - A <= X:
+            print("YES")
+        else:
+            print("NO")
+    elif B < A:
+        # Need cold water
+        if A - B <= Y:
+            print("YES")
+        else:
+            print("NO")
+    else:
+        # Temperature already perfect
+        print("YES")
