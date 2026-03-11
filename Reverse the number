@@ -1,0 +1,15 @@
+# Reverse The Number - CodeChef Problem FLOW007
+
+# Read number of test cases
+T = int(input().strip())
+
+for _ in range(T):
+    # Read the integer N
+    N = input().strip()
+    
+    # Reverse the string and convert back to int
+    # int() removes any leading zeros automatically
+    reversed_num = int(N[::-1])
+    
+    # Print the result
+    print(reversed_num)
