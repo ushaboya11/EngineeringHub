@@ -1,0 +1,17 @@
+# Elections in Chefland - CodeChef Problem ELECTN
+
+# Read number of test cases
+T = int(input().strip())
+
+for _ in range(T):
+    # Read N and X
+    N, X = map(int, input().split())
+    
+    # Read ages of N people
+    ages = list(map(int, input().split()))
+    
+    # Count eligible voters (age >= X)
+    eligible = sum(1 for age in ages if age >= X)
+    
+    # Print result
+    print(eligible)
