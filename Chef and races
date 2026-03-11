@@ -1,0 +1,12 @@
+T = int(input())
+
+for _ in range(T):
+    X, Y, A, B = map(int, input().split())
+    
+    chef_races = {X, Y}
+    rival_races = {A, B}
+    
+    # Chef can win in races that are not shared with rival
+    max_medals = len(chef_races - rival_races)
+    
+    print(max_medals)
