@@ -1,0 +1,18 @@
+# Fill Candies - CodeChef Problem FILLCANDIES
+
+import math
+
+# Read number of test cases
+T = int(input().strip())
+
+for _ in range(T):
+    # Read N (candies), K (pockets per bag), M (candies per pocket)
+    N, K, M = map(int, input().split())
+    
+    # Capacity of one bag = K * M
+    capacity = K * M
+    
+    # Minimum number of bags = ceil(N / capacity)
+    bags = math.ceil(N / capacity)
+    
+    print(bags)
