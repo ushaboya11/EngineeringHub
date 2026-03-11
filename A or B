@@ -1,0 +1,12 @@
+t = int(input())
+for _ in range(t):
+    X, Y = map(int, input().split())
+    
+    # Order 1: A -> B
+    score_A_first = (500 - 2 * X) + (1000 - 4 * (X + Y))
+    
+    # Order 2: B -> A
+    score_B_first = (1000 - 4 * Y) + (500 - 2 * (X + Y))
+    
+    # Maximum score
+    print(max(score_A_first, score_B_first))
