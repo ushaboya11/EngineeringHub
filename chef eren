@@ -1,0 +1,20 @@
+import sys
+
+def total_duration(N, A, B):
+    odd_count = (N + 1) // 2   # ceil(N/2)
+    even_count = N // 2        # floor(N/2)
+    return odd_count * B + even_count * A
+
+def main():
+    data = sys.stdin.read().strip().split()
+    T = int(data[0])
+    out = []
+    i = 1
+    for _ in range(T):
+        N = int(data[i]); A = int(data[i+1]); B = int(data[i+2])
+        i += 3
+        out.append(str(total_duration(N, A, B)))
+    print("\n".join(out))
+
+if __name__ == "__main__":
+    main()
