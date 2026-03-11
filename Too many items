@@ -1,0 +1,16 @@
+# Too many items - CodeChef Problem POLYBAGS
+
+import math
+
+# Read number of test cases
+T = int(input().strip())
+
+for _ in range(T):
+    # Read N (number of items)
+    N = int(input().strip())
+    
+    # Each polybag can hold at most 10 items
+    # Minimum bags = ceil(N / 10)
+    bags = math.ceil(N / 10)
+    
+    print(bags)
