@@ -1,0 +1,6 @@
+T = int(input())
+for _ in range(T):
+    N, M = map(int, input().split())
+    extra_left = max(0, N - M)
+    extra_right = N
+    print(extra_left + extra_right)
