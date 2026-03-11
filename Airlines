@@ -1,0 +1,20 @@
+import sys
+import math
+
+def min_new_planes(X, N):
+    required = math.ceil(N / 100)
+    return max(0, required - X)
+
+def main():
+    data = sys.stdin.read().strip().split()
+    T = int(data[0])
+    out = []
+    i = 1
+    for _ in range(T):
+        X = int(data[i]); N = int(data[i+1])
+        i += 2
+        out.append(str(min_new_planes(X, N)))
+    print("\n".join(out))
+
+if __name__ == "__main__":
+    main()
