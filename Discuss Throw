@@ -1,0 +1,13 @@
+# Discus Throw - CodeChef Problem DISCUS
+
+# Read number of test cases
+T = int(input().strip())
+
+for _ in range(T):
+    # Read three throw distances
+    A, B, C = map(int, input().split())
+    
+    # Final score is the maximum of the three throws
+    final_score = max(A, B, C)
+    
+    print(final_score)
