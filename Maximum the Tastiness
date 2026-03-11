@@ -1,0 +1,15 @@
+# Maximise the Tastiness - CodeChef Problem MAXTASTE
+
+# Read number of test cases
+T = int(input().strip())
+
+for _ in range(T):
+    # Read tastiness values of four ingredients
+    a, b, c, d = map(int, input().split())
+    
+    # Chef can choose either A or B as first ingredient,
+    # and either C or D as second ingredient.
+    # So we need max(a, b) + max(c, d)
+    max_tastiness = max(a, b) + max(c, d)
+    
+    print(max_tastiness)
